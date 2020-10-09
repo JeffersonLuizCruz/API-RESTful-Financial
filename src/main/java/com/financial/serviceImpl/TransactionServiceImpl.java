@@ -21,21 +21,18 @@ public class TransactionServiceImpl implements TransactionService{
 	}
 
 	@Override
+	public Optional<Transaction> findByNsu(String nsu) {
+		return repository.findByNsu(nsu);
+	}
+
+	@Override
 	public void deleteById(Long transactionId) {
-		repository.deleteById(transactionId);
-		
+		repository.deleteById(transactionId);		
 	}
 
 	@Override
 	public Optional<Transaction> findById(Long id) {
-		
 		return repository.findById(id);
-	}
-	
-	@Override
-	public Optional<Transaction> findByNsu(String nsu) {
-		repository.findByNsu(nsu);
-		return null;
 	}
 
 }
