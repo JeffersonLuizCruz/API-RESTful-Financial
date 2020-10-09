@@ -12,6 +12,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sun.istack.NotNull;
@@ -41,6 +43,7 @@ public class Transaction implements Serializable{
 	private String authorizationNumber; //código único das transações online.
 	
 	@NotNull
+	@DateTimeFormat(iso = ISO.DATE_TIME)
 	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
 	private Date transactionDate;
 	
