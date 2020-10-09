@@ -1,4 +1,4 @@
-package com.financial.model;
+package com.financial.dto;
 
 import java.math.BigDecimal;
 import java.sql.Date;
@@ -9,6 +9,7 @@ import org.springframework.format.annotation.DateTimeFormat.ISO;
 import org.springframework.hateoas.RepresentationModel;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.financial.model.TransactionTypeEnum;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -17,7 +18,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = false)
-public class TransactionTDO extends RepresentationModel<TransactionTDO>{
+public class TransactionDTO extends RepresentationModel<TransactionDTO>{
 	
 	private Long id;
 	
@@ -37,6 +38,8 @@ public class TransactionTDO extends RepresentationModel<TransactionTDO>{
 	
 	@javax.validation.constraints.NotNull(message = "Type cannot be null")
 	private TransactionTypeEnum type;
+	
+	
 
 
 }

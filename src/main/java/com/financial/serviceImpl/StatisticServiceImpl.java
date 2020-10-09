@@ -15,7 +15,6 @@ public class StatisticServiceImpl implements StatisticService{
 
 	@Override
 	public Statistic save(Statistic statistic) {
-		
 		return repository.save(statistic);
 	}
 

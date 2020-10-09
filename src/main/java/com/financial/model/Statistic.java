@@ -11,10 +11,12 @@ import lombok.NoArgsConstructor;
 @Data
 public class Statistic {
 	
-	private BigDecimal sum;
-	private BigDecimal avg;
-	private BigDecimal max;
-	private BigDecimal min;
-	private long count;
+	private BigDecimal sum; //sum: um BigDecimal especificando a soma total das transações criadas.
+	private BigDecimal avg; //avg: um BigDecimal especificando a média dos valores das transações criadas.
+	private BigDecimal max; //um BigDecimal especificando o maior valor dentre as transações criadas.
+	private BigDecimal min; //um BigDecimal especificando o menor valor dentre as transações criadas.
+	private long count; //count: um long especificando o número total de transações.
+	
+	
 
 }
