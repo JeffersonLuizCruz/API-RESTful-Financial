@@ -1,4 +1,4 @@
-package com.financial.dto;
+package com.financial.requestdto;
 
 import java.math.BigDecimal;
 

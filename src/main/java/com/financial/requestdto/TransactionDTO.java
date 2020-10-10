@@ -1,7 +1,9 @@
-package com.financial.dto;
+package com.financial.requestdto;
 
 import java.math.BigDecimal;
 import java.sql.Date;
+
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -30,13 +32,13 @@ public class TransactionDTO extends RepresentationModel<TransactionDTO>{
 	
 	@DateTimeFormat(iso = ISO.DATE_TIME)
 	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
-	@javax.validation.constraints.NotNull(message = "TransactionDate cannot be null")
+	@NotNull(message = "TransactionDate cannot be null")
 	private Date transactionDate;
 	
-	@javax.validation.constraints.NotNull(message = "Amount cannot be null")
+	@NotNull(message = "Amount cannot be null")
 	private BigDecimal amount;
 	
-	@javax.validation.constraints.NotNull(message = "Type cannot be null")
+	@NotNull(message = "Type cannot be null")
 	private TransactionTypeEnum type;
 	
 	
